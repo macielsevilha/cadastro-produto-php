@@ -1,6 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
+
     height: 70px;
+    
+}
+.logoTipo a img {
+    
 }
