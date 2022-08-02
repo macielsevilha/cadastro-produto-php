@@ -15,8 +15,16 @@
 .logoTipo a img {
     
 }
+.var a{
+    padding-left: 20px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+}
 .menu {
     position: fixed;
+    z-index: -5;
     top: 70px;
     left: 0;
     ul {
@@ -31,6 +39,7 @@
     }
     a {
         text-decoration: none;
+        color: #333;
      
     }
 }

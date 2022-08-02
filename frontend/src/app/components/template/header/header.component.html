@@ -1,14 +1,25 @@
-<mat-toolbar class="header">
+<mat-toolbar class="header mat-elevation-z1">
    <span class="LogoTipo">
       <a href="">
         <img src="assets/imgs/logoTipo.png" alt="">
       </a>
    </span>
+   <span class="var">
+      <a mat- href="">
+         <mat-icon  class="material-icons icon" color="primary">
+            home
+         </mat-icon>
+         Home
+      </a>
+   </span>
    <nav class="menu">
      <ul>
         <li><a href="">Home</a></li>
+        <mat-divider></mat-divider>
         <li><a href="">Cadastro de Produto</a></li>
+        <mat-divider></mat-divider>
         <li><a href="">Sobre o Site</a></li>
+        <mat-divider></mat-divider>
      </ul>
   </nav>
 </mat-toolbar>
