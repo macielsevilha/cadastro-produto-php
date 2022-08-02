@@ -10,12 +10,14 @@ import { MatSliderModule } from '@angular/material/slider'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list';
-import { NavbarComponent } from './components/template/navbar/navbar.component'
+import { NavbarComponent } from './components/template/navbar/navbar.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component'
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
+    ProductReadComponent,
    
   ],
   imports: [
