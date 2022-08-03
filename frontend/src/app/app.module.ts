@@ -12,7 +12,8 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list';
 import { NavbarComponent } from './components/template/navbar/navbar.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
-import { FooterComponent } from './components/template/footer/footer.component'
+import { FooterComponent } from './components/template/footer/footer.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud/product-crud.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { FooterComponent } from './components/template/footer/footer.component'
     NavbarComponent,
     ProductReadComponent,
     FooterComponent,
+    ProductCrudComponent,
    
   ],
   imports: [
