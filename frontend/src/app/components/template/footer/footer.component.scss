@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+  
+    display: flex;
+    justify-content: flex-end;
+}
+.footer span{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.v-middle {
+    margin-right: 2px;
+}
