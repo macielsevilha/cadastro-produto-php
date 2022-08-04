@@ -13,7 +13,9 @@ import { MatListModule } from '@angular/material/list';
 import { NavbarComponent } from './components/template/navbar/navbar.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { FooterComponent } from './components/template/footer/footer.component';
-import { ProductCrudComponent } from './views/product-crud/product-crud/product-crud.component'
+import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { HomeComponent } from './views/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { ProductCrudComponent } from './views/product-crud/product-crud/product-
     ProductReadComponent,
     FooterComponent,
     ProductCrudComponent,
+    HomeComponent,
    
   ],
   imports: [
