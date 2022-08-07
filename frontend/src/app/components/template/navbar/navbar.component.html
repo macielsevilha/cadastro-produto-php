@@ -1,3 +1,8 @@
-<a href="">home</a>
-<a href="">pagina 1</a>
-<a href="">pagina 2</a>
+<mat-sidenav-container>
+    <a routerLink="/">home</a>
+    <a routerLink="/products">pagina 1</a>
+
+<mat-sidenav-content>
+    <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>
