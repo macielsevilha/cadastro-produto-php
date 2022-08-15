@@ -1,0 +1,12 @@
+
+.icon{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    
+    color: white;
+    text-decoration: none;
+}
+.icon mat-icon {
+    margin-right: 5px;
+}
