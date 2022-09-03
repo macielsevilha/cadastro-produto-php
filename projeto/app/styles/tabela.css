@@ -1,0 +1,11 @@
+.largura-table {
+    max-width: 1200px;
+    width: 100%;
+}
+.table-center {
+    text-align: center;
+}
+.button-voltar {
+    float: right;
+   padding: 30px 10px;
+}
