@@ -5,7 +5,7 @@
     public function index() 
     {
       try {
-        $loader = new \Twig\Loader\FilesystemLoader('app/pages');
+        $loader = new \Twig\Loader\FilesystemLoader('app/view');
         $twig = new \Twig\Environment($loader);
         $template = $twig->load("produto.html");
 

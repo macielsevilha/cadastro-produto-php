@@ -6,7 +6,7 @@
     {
       try {
        
-        $loader = new \Twig\Loader\FilesystemLoader('app/pages');
+        $loader = new \Twig\Loader\FilesystemLoader('app/view');
         $twig = new \Twig\Environment($loader);
         $template = $twig->load("home.html");
 
@@ -15,10 +15,6 @@
 
         $conteudo = $template->render($parametros);
         echo $conteudo;
-
-        $coletarCadastros = Cadastro::selecionaTodos();
-
-        var_dump($coletarCadastros);
 
       } catch (Exception $e) {
         echo $e->getMessage();
