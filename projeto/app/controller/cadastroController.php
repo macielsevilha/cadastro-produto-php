@@ -13,25 +13,15 @@
 
         $conteudo = $template->render($parametros);
         echo $conteudo;
-
-        $coletarCadastros = Cadastro::selecionaTodos();
-
-        $teste = Cadastro::insert($_POST); 
-
-      
-
-        var_dump($_POST['nome']);
-     
+        
+        Cadastro::selecionaTodos();
+        AdminController::insert();
         
       } catch (Exception $e) {
         echo $e->getMessage();
       }
 
       
-    }
-    public function insert()
-    {
-    
     }
   }
 

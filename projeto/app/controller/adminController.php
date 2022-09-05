@@ -3,12 +3,13 @@
   {
     public function insert()
     {
-       Cadastro::insert($_POST); 
-
-       echo 'tetse';
-       $coletarCadastros = Cadastro::selecionaTodos();
-
-       var_dump($coletarCadastros);
+      try {
+        Cadastro::insert($_POST); 
+        echo '<script>alert("Publicação inserida com sucesso!");</script>';
+        echo '<script>location.href="http://localhost/macielSevilha-php/projeto/index.php?pagina=produto";</script>';
+      } catch (Exception $e) {
+        echo '<script>alert("'.$e->getMessage().'");</script>';
+      }
     }
   }
 ?>
