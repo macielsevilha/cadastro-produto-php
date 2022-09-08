@@ -11,7 +11,7 @@
         $template = $twig->load("home.html");
 
         $parametros = array();
-        $parametros['nome'] = 'rafael';
+        $parametros['nome'] = 'Maciel';
 
         $conteudo = $template->render($parametros);
         echo $conteudo;

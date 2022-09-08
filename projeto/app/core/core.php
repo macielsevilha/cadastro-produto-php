@@ -31,6 +31,5 @@ class Core
         }
         call_user_func(array(new $controller, $acao), $id);
 
-        var_dump($id);
     }
 }

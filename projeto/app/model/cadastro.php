@@ -41,7 +41,7 @@
        } else {
        
         echo '<script>alert("Falha ao enserir os dados");</script>';
-        return true; 
+        return false; 
        }
 
      
