@@ -12,11 +12,9 @@
       {% for produto in cadastro %}
       <tr class="table-center">
         <th scope="row">{{ produto.nome }}</th>
-        <td>{{ produto.quantidade }}</td>
-        <td>{{ produto.preco }}</td>
-        <td>{{ produto.codBarra }}</td>
+       
         <td>
-          <a href="" class="btn btn-primary">editar</a>
+          <a href="http://localhost/macielSevilha-php/projeto/index.php?pagina=editar" class="btn btn-primary">editar</a>
           <a href="" class="btn btn-danger">apagar</a>
         </td>
       </tr>

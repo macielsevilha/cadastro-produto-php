@@ -4,6 +4,8 @@
  {
     public static function selecionaTodos()
     {
+
+        
         $con = Connection::getConn();
         $sql = "SELECT * FROM cadastro ORDER BY id DESC";
         $sql = $con->prepare($sql);
@@ -21,6 +23,7 @@
     public static function insert($dadosPost) 
     {
 
+      
      if($dadosPost == null) {
         throw new Exception("Preencha todos os campos");
         return false;   
