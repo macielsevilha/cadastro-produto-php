@@ -4,10 +4,9 @@
  {
     public static function selecionaTodos()
     {
-
         
         $con = Connection::getConn();
-        $sql = "SELECT * FROM cadastro ORDER BY id DESC";
+        $sql = "SELECT * FROM cadastro ORDER BY id ASC";
         $sql = $con->prepare($sql);
         $sql->execute();
 
@@ -22,8 +21,6 @@
 
     public static function insert($dadosPost) 
     {
-
-      
      if($dadosPost == null) {
         throw new Exception("Preencha todos os campos");
         return false;   
@@ -46,8 +43,18 @@
         echo '<script>alert("Falha ao enserir os dados");</script>';
         return false; 
        }
+    }
 
-     
+    public static function selecionaPorId($idCadastro) {
+        $con = Connection::getConn();
+
+        $sql = "SELECT * FROM cadastro WHERE id = :id";
+        $sql = $con->prepare($sql);
+        $sql->bindValue(':id', $idCadastro, PDO::PARAM_INT);
+        $sql->execute();
+
+        $resultado = $sql->fetchObject('Cadastro');
+        return $resultado;
     }
  }
 

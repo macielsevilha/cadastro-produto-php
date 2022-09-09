@@ -1,0 +1,13 @@
+.alterar-largura {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+.form-alter {
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.form-alter input {
+    margin: 5px 0px;
+}
