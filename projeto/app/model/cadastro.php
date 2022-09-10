@@ -21,6 +21,7 @@
 
     public static function insert($dadosPost) 
     {
+
      if($dadosPost == null) {
         throw new Exception("Preencha todos os campos");
         return false;   
@@ -28,6 +29,8 @@
        } if ($dadosPost['nome'] && $dadosPost['quantidade'] && $dadosPost['preco'] && $dadosPost['codBarra'] !== null ) {
         
         $con = Connection::getConn();
+
+       
        
         $sql = $con->prepare('INSERT INTO cadastro (nome, quantidade, preco, codBarra) VALUES (:n, :q, :p, :c)');
         $sql->bindValue(':n', $dadosPost['nome']);
@@ -44,7 +47,7 @@
         return false; 
        }
     }
-
+    
     public static function selecionaPorId($idCadastro) {
         $con = Connection::getConn();
 
@@ -55,6 +58,25 @@
 
         $resultado = $sql->fetchObject('Cadastro');
         return $resultado;
+    }
+
+    public static function alterar($idAlterar, $colecao) {
+
+       $n = $colecao[0];
+
+       var_dump($n);
+
+      
+
+        $con = Connection::getConn();
+        $sql = 'UPDATE cadastro SET nome=$n WHERE id=:id';
+        $sql = $con->prepare($sql);
+        $sql->bindValue(':id', $idAlterar, PDO::PARAM_INT);
+        $sql->execute();
+
+        $resultado = $sql->fetchObject('Cadastro');
+        return $resultado;
+        var_dump($sql);
     }
  }
 
