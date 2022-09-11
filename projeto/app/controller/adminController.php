@@ -6,6 +6,7 @@
     {
        
       try {
+       
         $dados = Cadastro::insert($_POST); 
         if(!$dados == null){
           echo '<script>alert("Publicação inserida com sucesso!");</script>';

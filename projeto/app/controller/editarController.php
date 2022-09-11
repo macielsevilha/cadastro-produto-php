@@ -5,7 +5,7 @@
     public function change($paramId) 
     {
       try {
-
+      
         $loader = new \Twig\Loader\FilesystemLoader('app/view');
         $twig = new \Twig\Environment($loader);
         $template = $twig->load("editar.html");
@@ -20,18 +20,12 @@
         $parametros['preco'] = $modificar->preco;
         $parametros['codBarra'] = $modificar->codBarra;
 
-        $n = array($parametros['nome']);
-        $q = array($parametros['quantidade']);
-        $p = array($parametros['preco']);
-        $c = array($parametros['codBarra']);
-
-        $colecao = array($n, $q, $p, $c);
-        
-    
-        $alterar = Cadastro::alterar($paramId, $colecao);
+        var_dump($_POST);
 
         $conteudo = $template->render($parametros);
         echo $conteudo;
+
+       
       } catch (Exception $e) {
         echo $e->getMessage();
       }

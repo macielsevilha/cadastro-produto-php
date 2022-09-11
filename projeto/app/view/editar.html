@@ -1,37 +1,36 @@
-<form class="form-alter">
+<form class="form-alter" method="POST" action="">
     <div class="alterar-largura">
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">nome</label>
+            <label for="name" class="col-sm-2 col-form-label">nome</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" value="{{ nome }}">
+                <input type="text" class="form-control" value="{{ nome }}" name="nome">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">quantidade</label>
+            <label for="quantidade" class="col-sm-2 col-form-label">quantidade</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" value="{{ quantidade }}">
+                <input type="text" class="form-control" value="{{ quantidade }}" name="quantidade">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">preço</label>
+            <label for="preço" class="col-sm-2 col-form-label">preço</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" value="{{ preco }}">
+                <input type="text" class="form-control" value="{{ preco }}" name="preço">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">código barra</label>
+            <label for="codBarra" class="col-sm-2 col-form-label">código barra</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" value="{{ codBarra }}">
+                <input type="text" class="form-control" value="{{ codBarra }}" name="codBarra">
             </div>
         </div>
-
         <div class="button-voltar">
-            <a href="http://localhost/macielSevilha-php/projeto/index.php?pagina=produto&metodo=index" class="btn btn-danger">Voltar
+            <a href="http://localhost/macielSevilha-php/projeto/index.php?pagina=produto&metodo=index"
+                class="btn btn-danger">Voltar
                 &raquo;</a>
         </div>
         <div class="button-voltar">
-            <a href="http://localhost/macielSevilha-php/projeto/index.php?pagina=cadastro"
-                class="btn btn-primary">Alterar cadastro</a>
+            <button type="submit" class="btn btn-primary" name="alterar">Alterar cadastro</button>
         </div>
     </div>
 </form>

@@ -4,7 +4,7 @@
  {
     public static function selecionaTodos()
     {
-        
+      
         $con = Connection::getConn();
         $sql = "SELECT * FROM cadastro ORDER BY id ASC";
         $sql = $con->prepare($sql);
@@ -60,23 +60,10 @@
         return $resultado;
     }
 
-    public static function alterar($idAlterar, $colecao) {
-
-       $n = $colecao[0];
-
-       var_dump($n);
-
+    public static function update() {
       
+        Cadastro::update();
 
-        $con = Connection::getConn();
-        $sql = 'UPDATE cadastro SET nome=$n WHERE id=:id';
-        $sql = $con->prepare($sql);
-        $sql->bindValue(':id', $idAlterar, PDO::PARAM_INT);
-        $sql->execute();
-
-        $resultado = $sql->fetchObject('Cadastro');
-        return $resultado;
-        var_dump($sql);
     }
  }
 

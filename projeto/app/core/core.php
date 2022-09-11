@@ -4,6 +4,8 @@ class Core
 {
     public function start($urlGet) 
     {
+
+       
         if(isset($urlGet['metodo'])) {
             $acao = $urlGet['metodo'];
         } else  {
