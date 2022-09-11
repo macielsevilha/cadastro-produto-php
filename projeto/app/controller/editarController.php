@@ -10,7 +10,6 @@
         $twig = new \Twig\Environment($loader);
         $template = $twig->load("editar.html");
  
-       
         $modificar = Cadastro::selecionaPorId($paramId);
 
         $parametros = array();
@@ -20,15 +19,18 @@
         $parametros['preco'] = $modificar->preco;
         $parametros['codBarra'] = $modificar->codBarra;
 
-        var_dump($_POST);
-
         $conteudo = $template->render($parametros);
         echo $conteudo;
-
        
       } catch (Exception $e) {
         echo $e->getMessage();
       }
+    }
+
+    public function update()
+    {
+      Cadastro::update();
+      var_dump($_POST);
     }
 
   }

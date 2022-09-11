@@ -61,9 +61,7 @@
     }
 
     public static function update() {
-      
-        Cadastro::update();
-
+     
     }
  }
 
