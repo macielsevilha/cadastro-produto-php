@@ -1,5 +1,10 @@
-<form class="form-alter" method="POST" action="?pagina=editar&metodo=update">
+<form class="form-alter" method="post" action="?pagina=editar&metodo=update">
     <div class="alterar-largura">
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <input type="hidden" class="form-control" value="{{ id }}" name="id">
+            </div>
+        </div>
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">nome</label>
             <div class="col-sm-10">

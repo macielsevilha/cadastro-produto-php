@@ -1,5 +1,5 @@
 <?php
-  
+
   class EditarController 
   {
     public function change($paramId) 
@@ -21,6 +21,8 @@
 
         $conteudo = $template->render($parametros);
         echo $conteudo;
+
+      
        
       } catch (Exception $e) {
         echo $e->getMessage();
@@ -29,8 +31,22 @@
 
     public function update()
     {
+      var_dump($_POST['id']);
       Cadastro::update();
-      var_dump($_POST);
+      //try {
+      //  
+
+     
+        
+      //  echo '<script>alert("Publicação alterada com sucesso!");</script>';
+      //  echo '<script>location.href="http://localhost/macielSevilha-php/projeto/index.php?pagina=produto";</script>';
+
+     // } catch (Exception $e) {
+     //     echo '<script>alert("'.$e->getMessage().'");</script>';
+      //    echo '<script>location.href="http://localhost/macielSevilha-php/projeto/index.php?pagina=editar&metodo=change&id='.$_POST['id'].'";</script>';
+     // }
+    
+      
     }
 
   }
