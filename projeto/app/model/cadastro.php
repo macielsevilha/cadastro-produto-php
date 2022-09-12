@@ -4,7 +4,6 @@
  {
     public static function selecionaTodos()
     {
-        
         $con = Connection::getConn();
         $sql = "SELECT * FROM cadastro ORDER BY id ASC";
         $sql = $con->prepare($sql);
@@ -55,6 +54,13 @@
 
         $resultado = $sql->fetchObject('Cadastro');
         return $resultado;
+    }
+
+    public static function update($params) {
+
+        $con = Connection::getConn();
+
+     
     }
  }
 
