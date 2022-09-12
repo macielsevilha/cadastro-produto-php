@@ -4,7 +4,7 @@
  {
     public static function selecionaTodos()
     {
-      
+        
         $con = Connection::getConn();
         $sql = "SELECT * FROM cadastro ORDER BY id ASC";
         $sql = $con->prepare($sql);
@@ -21,7 +21,6 @@
 
     public static function insert($dadosPost) 
     {
-
      if($dadosPost == null) {
         throw new Exception("Preencha todos os campos");
         return false;   
@@ -29,8 +28,6 @@
        } if ($dadosPost['nome'] && $dadosPost['quantidade'] && $dadosPost['preco'] && $dadosPost['codBarra'] !== null ) {
         
         $con = Connection::getConn();
-
-       
        
         $sql = $con->prepare('INSERT INTO cadastro (nome, quantidade, preco, codBarra) VALUES (:n, :q, :p, :c)');
         $sql->bindValue(':n', $dadosPost['nome']);
@@ -47,7 +44,7 @@
         return false; 
        }
     }
-    
+
     public static function selecionaPorId($idCadastro) {
         $con = Connection::getConn();
 
@@ -59,28 +56,6 @@
         $resultado = $sql->fetchObject('Cadastro');
         return $resultado;
     }
-
-    public static function update() {
-
-      
-       // $con = Connection::getConn();
-
-       // $sql = "UPDATE cadastro SET nome = :n, quantidade = q, preco = :p, codBarra = :c WHERE id = :id";
-       // $sql = $con->prepare($sql);
-        //$sql->bindValue(':n', $params['nome']);
-        //$sql->bindValue(':q', $params['quantidade']);
-        //$sql->bindValue(':p', $params['preco']);
-       // $sql->bindValue(':c', $params['codBarra']);
-       // $sql->bindValue(':id', $params['id']);
-       // $resultado = $sql->execute();
-
-       // if ($resultado == 0) {
-        //    throw new Exception('Falha ao alterar publicação');
-
-        //    return false;
-      //  }
-       // return true;
-    }//
  }
 
-?>s
+?>
