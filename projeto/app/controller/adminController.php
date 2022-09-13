@@ -60,5 +60,16 @@
         echo '<script>alert("'.$e->getMessage().'");</script>';
       }
     }
+
+    public function delete() {
+     
+      try {
+        Cadastro::delete($_GET['id']);
+        echo '<script>alert("Publicação deletada com sucesso!");</script>';
+        echo '<script>location.href="http://localhost/macielSevilha-php/projeto/index.php?pagina=produto&metodo=index";</script>';
+      } catch (Exception $e) {
+        echo '<script>alert("'.$e->getMessage().'");</script>';
+      }
+    }
   }
 ?>

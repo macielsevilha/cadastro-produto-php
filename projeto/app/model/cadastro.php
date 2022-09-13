@@ -74,9 +74,20 @@
 
 				return false;
 			}
-
 			return true;
 		}    
+    
+    public static function delete($id) {
+    
+        $con = Connection::getConn();
+
+        $sql = "DELETE FROM cadastro WHERE id = $id";
+        $sql = $con->prepare($sql);
+        $resultado = $sql->execute();
+
+        return $resultado;
+
+    }
  }
 
 ?>
