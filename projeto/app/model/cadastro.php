@@ -14,7 +14,7 @@
         while ($row = $sql->fetchObject('Cadastro')) {
             $resultado[] = $row;
         }
-
+        
         return $resultado;
     }
 
@@ -57,8 +57,6 @@
     }
 
     public static function update($params) {
-
-        var_dump($params);
 
         $con = Connection::getConn();
 

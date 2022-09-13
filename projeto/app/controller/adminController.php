@@ -40,8 +40,7 @@
         $parametros['quantidade'] = $modificar->quantidade;
         $parametros['preco'] = $modificar->preco;
         $parametros['codBarra'] = $modificar->codBarra;
-
-
+        
         $conteudo = $template->render($parametros);
         echo $conteudo;
       } catch (Exception $e) {
@@ -51,9 +50,15 @@
 
     public function update() 
     {
+      try {
+        Cadastro::update($_POST);
+
+        echo '<script>alert("Publicação alterada com sucesso!");</script>';
+        echo '<script>location.href="http://localhost/macielSevilha-php/projeto/index.php?pagina=produto&metodo=index";</script>';
      
-      Cadastro::update($_POST);
+      } catch (Exception $e) {
+        echo '<script>alert("'.$e->getMessage().'");</script>';
+      }
     }
-  
   }
 ?>

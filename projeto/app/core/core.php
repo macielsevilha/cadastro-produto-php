@@ -30,6 +30,5 @@ class Core
             $controller = 'ErroController';
         }
         call_user_func(array(new $controller, $acao), $id);
-
     }
 }

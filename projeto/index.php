@@ -10,7 +10,6 @@ require_once 'app/controller/produtoController.php';
 require_once 'app/controller/cadastroController.php';
 require_once 'app/controller/adminController.php';
 
-
 require_once 'app/model/cadastro.php';
 require_once 'vendor/autoload.php';
 
