@@ -51,7 +51,7 @@
 
     public function update() 
     {
-      var_dump($_POST);
+     
       Cadastro::update($_POST);
     }
   

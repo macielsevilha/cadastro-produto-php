@@ -58,10 +58,27 @@
 
     public static function update($params) {
 
+        var_dump($params);
+
         $con = Connection::getConn();
 
-     
-    }
+        $sql = "UPDATE cadastro SET nome = :n, quantidade= :q, preco = :p, codBarra = :c WHERE id = :id";
+			$sql = $con->prepare($sql);
+			$sql->bindValue(':n', $params['nome']);
+			$sql->bindValue(':q', $params['quantidade']);
+			$sql->bindValue(':p', $params['preco']);
+			$sql->bindValue(':c', $params['codBarra']);
+			$sql->bindValue(':id', $params['id']);
+			$resultado = $sql->execute();
+
+			if ($resultado == 0) {
+				throw new Exception("Falha ao alterar publicação");
+
+				return false;
+			}
+
+			return true;
+		}    
  }
 
 ?>
